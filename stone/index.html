@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="3DModel.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate>
+      <button class="Hotspot" slot="hotspot-1" data-position="-1.0284386425345673m 1.439508707476667m -0.5454590180292627m" data-normal="-0.8626547723054303m 0.18050242534900215m -0.4724887493494359m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">關羽</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="-0.3777675345790019m 3.007566189296898m 0.73825607775386m" data-normal="-0.7554392701716686m -0.09589432492286461m -0.648163395703649m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">關刀</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  </body>
+</html>
